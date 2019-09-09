@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+        <script>src="train.js"</script>
 
         
     </head>
@@ -34,26 +36,41 @@
             first train time (hh:mm military time)
             frequency (mins)
         </p>
+
+        <form class="sucess-none" id="newTrain">
+                <div class="inputs">
+                    <input type="text" value="" name="FNAME" class="required name" id="name" placeholder="Train Name: " style=" width: 35%; float: left; background: none; padding: 1.75em 2em; margin: 0; border-radius: .25em; box-shadow: none;">
+              
+                    <input type="text" value="" name="DESTINATION" class="required destination" id="destination" placeholder="Destination: " style=" width: 65%; float: left; background: none; padding: 1.75em 2em; margin: 0; border-radius: .25em; box-shadow: none;">
+
+                    <input type="integer" value="" name="time" class="required time" id="firstTime" placeholder="First Train Time: " style=" width: 65%; float: left; background: none; padding: 1.75em 2em; margin: 0; border-radius: .25em; box-shadow: none;">
+
+                    <input type="integer" value="" name="frequency" class="required frequency" id="frequency" placeholder="Frequency of train: " style=" width: 65%; float: left; background: none; padding: 1.75em 2em; margin: 0; border-radius: .25em; box-shadow: none;">
+
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_96d9e6e519173af7bdbdab9d_23138bd741" tabindex="-1" value="">
+                </div>
+                <input type="submit" class="btn" value="Submit" name="subscribe" id="submitContact">
+              </form>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCbkpARF1NLMvfj_wywe9qbfZfEJ8vTMYA",
-    authDomain: "train-time-1f9c9.firebaseapp.com",
-    databaseURL: "https://train-time-1f9c9.firebaseio.com",
-    projectId: "train-time-1f9c9",
-    storageBucket: "",
-    messagingSenderId: "170875927561",
-    appId: "1:170875927561:web:13fcd1f6ad2078b2020cd8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+
+
     </body>
-    <script>href="train.js"</script>
+    <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyCbkpARF1NLMvfj_wywe9qbfZfEJ8vTMYA",
+              authDomain: "train-time-1f9c9.firebaseapp.com",
+              databaseURL: "https://train-time-1f9c9.firebaseio.com",
+              projectId: "train-time-1f9c9",
+              storageBucket: "",
+              messagingSenderId: "170875927561",
+              appId: "1:170875927561:web:13fcd1f6ad2078b2020cd8"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
 </html>
