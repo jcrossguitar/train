@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
         
     </head>
     <body>
@@ -33,5 +34,26 @@
             first train time (hh:mm military time)
             frequency (mins)
         </p>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCbkpARF1NLMvfj_wywe9qbfZfEJ8vTMYA",
+    authDomain: "train-time-1f9c9.firebaseapp.com",
+    databaseURL: "https://train-time-1f9c9.firebaseio.com",
+    projectId: "train-time-1f9c9",
+    storageBucket: "",
+    messagingSenderId: "170875927561",
+    appId: "1:170875927561:web:13fcd1f6ad2078b2020cd8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     </body>
+    <script>href="train.js"</script>
 </html>
