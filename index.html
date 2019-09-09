@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
-        <script>src="train.js"</script>
+        <script src="train.js"></script>
 
         
     </head>
@@ -19,24 +19,7 @@
                 Add a train or look up a train. 
             </p>
         </div>
-        <p>
-            train name
-            destination
-            frequency (mins)
-            next arrival
-            minutes away
-
-        </p>
-        <br>
-        <br>
-        <br>
-        <p>Form to add a train
-            train name
-            destination
-            first train time (hh:mm military time)
-            frequency (mins)
-        </p>
-
+   
         <form class="sucess-none" id="newTrain">
                 <div class="inputs">
                     <input type="text" value="" name="FNAME" class="required name" id="name" placeholder="Train Name: " style=" width: 35%; float: left; background: none; padding: 1.75em 2em; margin: 0; border-radius: .25em; box-shadow: none;">
@@ -53,24 +36,47 @@
                 </div>
                 <input type="submit" class="btn" value="Submit" name="subscribe" id="submitContact">
               </form>
+              <br>
+              <br>
+              <br>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <table style="width:100%;border-style:solid;border-width:2px;">
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th> 
+                  <th>Frequency (Mins)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
 
+                </tr>
+                <tr>
+                  <td>2:10</td>
+                  <td>Yuma</td>
+                  <td>50</td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                  <td>NA</td>
+                  <td>NA</td>
+
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>80</td>
+                  <td>NA</td>
+                  <td>NA</td>
+
+                </tr>
+    </table>
 
 
 
     </body>
-    <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-              apiKey: "AIzaSyCbkpARF1NLMvfj_wywe9qbfZfEJ8vTMYA",
-              authDomain: "train-time-1f9c9.firebaseapp.com",
-              databaseURL: "https://train-time-1f9c9.firebaseio.com",
-              projectId: "train-time-1f9c9",
-              storageBucket: "",
-              messagingSenderId: "170875927561",
-              appId: "1:170875927561:web:13fcd1f6ad2078b2020cd8"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-          </script>
+
 </html>
