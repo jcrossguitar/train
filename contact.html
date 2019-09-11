@@ -1,0 +1,40 @@
+<div class="row">
+                <section class="resume-section p-4 p-lg-5 text-center" id="contact">
+                    <div class="my-auto">
+                        <h2 class="mb-4"> Want more information? Questions? Comments? </h2>
+                        <ul class="fa-ul mb-4 ml-0">
+                            <li id="mail-address">
+                                <i class="fas fa-envelope-open mr-2 contact-icons"></i>youremail@mail.com</a>
+                            </li>
+                            <li>(
+                                <i class="fas fa-mobile-alt mr-2 contact-icons"></i>555-555-5555)
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt mr-2 contact-icons"></i>San Diego, CA
+                            </li>
+                        </ul>
+                        <p>
+                          Leave your message below and we will be back to you as soon as possible.
+                        </p>
+                        <form class="contact-form d-flex flex-column align-items-center" id="contactForm"
+                            data-parsley-validate="">
+                            <!-- action="https://formspree.io/youremail@mail.com" method="POST"> -->
+                            <div class="form-group w-75">
+                                <input type="name" class="form-control" id="nameInput" placeholder="Name" name="name"
+                                data-parsley-required="true" />
+                            </div>
+                            <div class="form-group w-75">
+                                <input type="email" class="form-control" id="emailInput" data-parsley-type="email"
+                                    placeholder="Email" name="name" data-parsley-required="true" data-parsley-trigger-after-failure="focusin"/>
+                            </div>
+                            ​
+                            <div class="form-group w-75">
+                                <textarea class="form-control" type="text" id="messageInput" placeholder="Message"
+                                    rows="4" name="name" data-parsley-required="true" ></textarea>
+                            </div>
+                            ​
+                            <button type="submit" class="btn btn-submit btn-info w-55" id="addEmail" data-parsley-excluded="input[type=submit]">Submit</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
