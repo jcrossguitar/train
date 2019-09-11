@@ -34,27 +34,39 @@ var firebaseConfig = {
 
     firebase.initializeApp(firebaseConfig);
 
-    $("#submitContact").click(function(){
-        console.log('search...')
-                // creating a variable for search term
-var nameField = $("#name").val().trim();
-var destinationField = $("#destination").val().trim();
-var timeField = $("#firstTime").val().trim();
-var frequencyField = $("#Frequency").val().trim();
-var db = firebase.database();
-
-var createRow = function(data) {
-// Create a new table row element
-var tRow = $("<tr>");
-// Methods run on jQuery selectors return the selector they we run on
-// This is why we can create and save a reference to a td in the same statement we update its text
-var titleTd = $("<td>").text(data);
-// Append the newly created table data to the table row
-tRow.append(titleTd);
-// Append the table row to the table body
-$("tbody").append(tRow);
-};
-console.log(nameField);
-    });
-
+    
+    // var b = firebase.database().ref("messages");
+        $("#submitContact").submit(function(a) { $(this), console.log("Submit to Firebase");
+        var c = $("#name").val(),
+            d = $("#destination").val(),
+            x = $("#timeField").val(),
+            y = $("#frequencyField").val(),
+            f = { name: c, destination: d, timeField: x, frequencyField: y};
+        return f.push(f).then(function(a) { 
+            $(".sucess").css("display", "block"), 
+            $(".sucess-none").css("display", "none") }), !1 })   
 });
+
+//     $("#submitContact").click(function(){
+//         console.log('search...')
+//                 // creating a variable for search term
+// var nameField = $("#name").val().trim();
+// var destinationField = $("#destination").val().trim();
+// var timeField = $("#firstTime").val().trim();
+// var frequencyField = $("#Frequency").val().trim();
+// var db = firebase.database();
+
+// var createRow = function(data) {
+// // Create a new table row element
+// var tRow = $("<tr>");
+// // Methods run on jQuery selectors return the selector they we run on
+// // This is why we can create and save a reference to a td in the same statement we update its text
+// var titleTd = $("<td>").text(data);
+// // Append the newly created table data to the table row
+// tRow.append(titleTd);
+// // Append the table row to the table body
+// $("tbody").append(tRow);
+// };
+// console.log(nameField);
+//     });
+
