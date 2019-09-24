@@ -40,20 +40,20 @@ var firebaseConfig = {
     var b = firebase.database();
 
         $("#submitContact").submit(function(a) { $(this), console.log("Submit to Firebase");
-        var c = $("#name").val(),
-            d = $("#destination").val(),
-            x = $("#timeField").val(),
-            y = $("#frequencyField").val(),
+        var c = $("#name").val().trim(),
+            d = $("#destination").val().trim(),
+            x = $("#timeField").val().trim(),
+            y = $("#frequencyField").val().trim(),
             f = { name: c, destination: d, timeField: x, frequencyField: y};
         return f.push(f).then(function(a) { 
             $(".sucess").css("display", "block"), 
             $(".sucess-none").css("display", "none") }), !1 })   
 
             b.ref().push({
-                name: name,
-                destination: destination,
-                timeField: timeField,
-                frequencyField: frequencyField
+                name: c,
+                destination: d,
+                timeField: x,
+                frequencyField: y
             });
 });
 
