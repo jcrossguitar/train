@@ -18,6 +18,9 @@
 // });
 
 
+
+
+
 $(document).ready(function() {
   console.log("train file has loaded")
 
@@ -34,8 +37,8 @@ var firebaseConfig = {
 
     firebase.initializeApp(firebaseConfig);
 
-    
-    // var b = firebase.database().ref("messages");
+    var b = firebase.database();
+
         $("#submitContact").submit(function(a) { $(this), console.log("Submit to Firebase");
         var c = $("#name").val(),
             d = $("#destination").val(),
@@ -45,6 +48,13 @@ var firebaseConfig = {
         return f.push(f).then(function(a) { 
             $(".sucess").css("display", "block"), 
             $(".sucess-none").css("display", "none") }), !1 })   
+
+            b.ref().push({
+                name: name,
+                destination: destination,
+                timeField: timeField,
+                frequencyField: frequencyField
+            });
 });
 
 //     $("#submitContact").click(function(){
@@ -69,4 +79,7 @@ var firebaseConfig = {
 // };
 // console.log(nameField);
 //     });
+
+// this thing from firebase
+
 
